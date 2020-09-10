@@ -53,9 +53,7 @@ body {
     text-decoration: none;
 }
 
-section .section_wrapper {
-    transition: 2s cubic-bezier(0.6, -0.4, 0.27, 1.34) 0.2s
-}
+section .section_wrapper {}
 
 section {
     display: flex;
@@ -69,7 +67,7 @@ section {
 }
 
 section#greeting {
-    background: url(img/profile2.JPG) no-repeat center center;
+    background: url(img/profile2.JPG) no-repeat center center cover;
 }
 
 section#2016 {}
