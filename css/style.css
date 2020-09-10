@@ -99,7 +99,7 @@ footer {
 }
 
 .toggle {
-    z-index: 10;
+    z-index: 11;
     position: absolute;
     top: 4%;
     left: 86%;
