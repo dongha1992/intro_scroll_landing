@@ -1,0 +1,306 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(http://cdn.rawgit.com/young-ha/webfont-archive/master/css/NaumGothic.css);
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", 'NaumGothic', Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    /*CSS smooth scroll*/
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    position: relative;
+}
+
+.nav_bar {
+    position: absolute;
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #333;
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-out;
+    z-index: 10;
+}
+
+.nav_active {
+    transform: translateY(0%)
+}
+
+.footer_active {
+    transform: translateX(0%)
+}
+
+.nav_bar .nav_ul {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+}
+
+.nav_bar ul li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.nav_bar ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    cursor: wait;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #333;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-out;
+    z-index: 10;
+    width: 10%;
+}
+
+.footer_ul {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.footer_ul li {
+    list-style: none;
+}
+
+.footer_ul li a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+.toggle {
+    z-index: 10;
+    position: absolute;
+    top: 4%;
+    left: 86%;
+    cursor: pointer;
+}
+
+.toggle div {
+    height: 3px;
+    width: 20px;
+    background-color: white;
+    margin-top: 3px;
+}
+
+.timeline_bar {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 30%;
+    left: 85%;
+}
+
+.timeline_bar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style: none;
+    text-decoration: none;
+    height: 50vh;
+}
+
+.timeline_bar ul::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0%;
+    left: -5%;
+    z-index: 1;
+}
+
+.timeline_bar ul li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.timeline_bar ul li a {
+    color: rgba(255, 255, 255, 0.3);
+    list-style: none;
+    text-decoration: none;
+}
+
+.timeline_bar ul li a:hover {
+    color: white;
+}
+
+.section_wrapper {
+    height: 100vh;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    scroll-snap-align: center;
+    z-index: 10;
+}
+
+#greeting {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#greeting::after {
+    content: "";
+    background: url(../img/profile2.JPG) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#travel {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#travel::after {
+    content: "";
+    background: url(../img/profile.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#book {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#book::after {
+    content: "";
+    background: url(../img/2017.jpeg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#korea {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#korea::after {
+    content: "";
+    background: url(../img/2018.jpeg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#germany {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#germany::after {
+    content: "";
+    background: url(../img/2019.jpeg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
+
+#coding {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+#coding::after {
+    content: "";
+    background: url(../img/profile2.JPG) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+    opacity: 0.5 !important;
+    filter: alpha(opacity=50);
+}
