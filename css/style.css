@@ -130,6 +130,8 @@ footer {
     list-style: none;
     text-decoration: none;
     height: 50vh;
+    width: 100%;
+    position: fixed;
 }
 
 .timeline_bar ul::before {
@@ -146,37 +148,21 @@ footer {
 .timeline_bar ul li {
     list-style: none;
     text-decoration: none;
+    width: 100%;
 }
 
 .timeline_bar ul li a {
     color: rgba(255, 255, 255, 0.3);
     list-style: none;
     text-decoration: none;
-    width: 100%;
 }
 
 .timeline_bar ul li a:hover {
     color: white;
 }
 
-.timeline_bar ul li a::before {
-    content: "";
-    background-color: white;
-    height: 5px;
-    width: 5px;
-    position: absolute;
-    z-index: 11;
-    border-radius: 50%;
-    left: -25px;
-    transform: translateY(-100%);
-}
-
-.timeline_bar ul li {
-    overflow: hidden;
-}
-
-.timeline_bar ul li a.active::before {
-    transform: translateY(0%)
+.timeline_bar ul li a.active {
+    color: white;
 }
 
 .section_wrapper {
