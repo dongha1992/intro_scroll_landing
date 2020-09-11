@@ -63,6 +63,7 @@ body {
     list-style: none;
     color: white;
     cursor: wait;
+    width: 100%;
 }
 
 footer {
@@ -151,10 +152,31 @@ footer {
     color: rgba(255, 255, 255, 0.3);
     list-style: none;
     text-decoration: none;
+    width: 100%;
 }
 
 .timeline_bar ul li a:hover {
     color: white;
+}
+
+.timeline_bar ul li a::before {
+    content: "";
+    background-color: white;
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    z-index: 11;
+    border-radius: 50%;
+    left: -25px;
+    transform: translateY(-100%);
+}
+
+.timeline_bar ul li {
+    overflow: hidden;
+}
+
+.timeline_bar ul li a.active::before {
+    transform: translateY(0%)
 }
 
 .section_wrapper {
@@ -193,6 +215,32 @@ section {
     z-index: -10;
     opacity: 0.5 !important;
     filter: alpha(opacity=50);
+}
+
+.section_wrapper .typing {
+    position: relative;
+    font-size: 25px;
+    padding-right: 5px;
+}
+
+.section_wrapper .typing::after {
+    content: "";
+    height: 20px;
+    width: 2px;
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    background-color: white;
+    animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 #travel {
