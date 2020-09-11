@@ -2,9 +2,6 @@ const toggleBtn = document.querySelector(".toggle")
 const nav = document.querySelector(".nav_bar")
 const footer = document.querySelector("footer")
 const section = document.querySelectorAll("section")
-const
-
-
 
 
 
