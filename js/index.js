@@ -3,9 +3,29 @@ const nav = document.querySelector(".nav_bar")
 const footer = document.querySelector("footer")
 const sections = document.querySelectorAll(".section_wrapper section")
 const anchor = document.querySelectorAll(".timeline_bar a")
+const text = document.querySelectorAll(".text_content .text")
 
+
+
+function scrollAppear() {
+    console.log(text)
+    text.forEach(target => {
+        console.log(target)
+
+        window.addEventListener("scroll", function() {
+            let screenPos = window.innerHeight;
+            const pos = target.getBoundingClientRect().top;
+
+            if (pos < screenPos) {
+                target.classList.add("text_appear")
+
+            }
+        })
+    })
+}
 
 function hoverhandler() {
+
     sections.forEach(section => {
         section.addEventListener("mouseenter", function() {
             const id = this.getAttribute("id")
@@ -27,6 +47,7 @@ function handleToggle() {
 function init() {
     toggleBtn.addEventListener("click", handleToggle)
     hoverhandler()
+    scrollAppear()
 }
 
 init()

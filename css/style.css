@@ -181,16 +181,20 @@ section {
     z-index: 10;
 }
 
-.section_wrapper .text {
+
+/*
+.text_content .text {
     width: 100%;
     transform: translateY(30px);
-    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
 }
 
 .text_appear {
     opacity: 1;
     transform: translateY(0px);
 }
+*/
 
 .section_wrapper .text h1 {
     font-size: 35px;
