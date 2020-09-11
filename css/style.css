@@ -205,17 +205,17 @@ section {
 
 .section_wrapper .typing {
     position: relative;
-    font-size: 25px;
+    font-size: 45px;
     padding-right: 5px;
 }
 
 .section_wrapper .typing::after {
     content: "";
-    height: 20px;
+    height: 40px;
     width: 2px;
     position: absolute;
     right: -5px;
-    top: 10px;
+    top: 15px;
     background-color: white;
     animation: blink 1s infinite ease;
 }
@@ -337,4 +337,22 @@ section {
     z-index: -10;
     opacity: 0.5 !important;
     filter: alpha(opacity=50);
+}
+
+@media screen and (max-width: 768px) {
+    .section_wrapper .typing {
+        position: relative;
+        font-size: 25px;
+        padding-right: 5px;
+    }
+    .section_wrapper .typing::after {
+        content: "";
+        height: 25px;
+        width: 2px;
+        position: absolute;
+        right: -5px;
+        top: 10px;
+        background-color: white;
+        animation: blink 1s infinite ease;
+    }
 }
