@@ -379,7 +379,13 @@ section {
         background-color: white;
         animation: blink 1s infinite ease;
     }
-    .section_wrapper .text {
+    .content_wrapper .text p {
+        font-size: 12px;
+    }
+    .content_wrapper .text h1 {
+        font-size: 25px;
+    }
+    #germany .text p {
         font-size: 13px;
     }
 }
